@@ -53,28 +53,36 @@ let accString = account_id.replace(/\s/g, '');
 let randNum = Math.random() * 100;
 let visitor;
 let role;
+let persona;
 
 if (randNum < 25) {
     visitor = 'visitor1@' + accString + '.com';
     role = 'admin';
+    persona = 'Product Manager'
 } else if (randNum <= 50) {
     visitor = 'visitor6@' + accString + '.com';
     role = 'admin';
+    persona = 'Product Manager'
 } else if (randNum <= 65) {
     visitor = 'visitor4@' + accString + '.com';
     role = 'user';
+    persona = 'Customer Success Manager'
 } else if (randNum <= 80) {
     visitor = 'visitor7@' + accString + '.com';
     role = 'user';
+    persona = 'Customer Success Manager'
 } else if (randNum <= 90) {
     visitor = 'visitor5@' + accString + '.com';
     role = 'user';
+    persona = 'Professional Services'
 } else if (randNum <= 95) {
     visitor = 'visitor3@' + accString + '.com';
     role = 'read-only';
+    persona = 'Technical Support'
 } else {
     visitor = 'visitor2@' + accString + '.com';
     role = 'read-only';
+    persona = 'Sales'
 }</script>
     
     <script>
@@ -83,7 +91,7 @@ if (randNum < 25) {
     v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
         o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
         y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
-        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo'),pendo.initialize({visitor:{id:visitorParam||visitor||"VISITOR-UNIQUE-ID",role:role||"user"},account:{id:accountParam||account_id}
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo'),pendo.initialize({visitor:{id:visitorParam||visitor||"VISITOR-UNIQUE-ID",role:role||"user",person:persona||"Product Manager"},account:{id:accountParam||account_id}
         });
 })('50bfa725-733b-4996-4ef1-01f5c679e710');
 </script>
