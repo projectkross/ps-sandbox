@@ -91,7 +91,7 @@ if (randNum < 25) {
     v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
         o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
         y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
-        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo'),pendo.initialize({visitor:{id:visitorParam||visitor||"VISITOR-UNIQUE-ID",role:role||"user",persona:persona||"Product Manager", tags:["role:"role, "persona:"persona]},account:{id:accountParam||account_id}
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo'),pendo.initialize({visitor:{id:visitorParam||visitor||"VISITOR-UNIQUE-ID",role:role||"user",persona:persona||"Product Manager", tags:[role, persona]},account:{id:accountParam||account_id}
         });
 })('50bfa725-733b-4996-4ef1-01f5c679e710');
 </script>
